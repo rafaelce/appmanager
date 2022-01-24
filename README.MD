@@ -1,6 +1,6 @@
 ## Introdução
 
-O projeto tem como objeto implementar as funcionalidas requisitadas no arquivo Challenge - Backend.pdf.
+O projeto tem como objeto implementar as funcionalidas requisitadas no arquivo teste_.net_core__api.docx.
 
 ## Padrões
 
@@ -17,15 +17,16 @@ O projeto tem como objeto implementar as funcionalidas requisitadas no arquivo C
 
 ## Tecnologias
 
-- .Net 5.0
-- PostgreSQL
+- .Net 3.1
+- SQL Server
 - Dapper
 - Swagger API Documentation
+- xUnit
 
 ## Começando
 
 1. Clonando o projeto
-   > git clone https://github.com/rafaelce/ticket.git
+   > git clone https://github.com/rafaelce/appmanager.git
 2. Softwares necessários
    - Visual Studio Code - [Download](https://code.visualstudio.com/download)
    - Postgresql - [Download](https://www.postgresql.org/download/)
