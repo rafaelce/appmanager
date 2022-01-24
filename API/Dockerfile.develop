@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://+:80
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+
+WORKDIR /src
+COPY ["appmanager/API/API.csproj", "API/"]
+COPY ["appmanager/Domain/Domain.csproj", "Domain/"]
+COPY ["appmanager/Persistence/Persistence.csproj", "Persistence/"]
+COPY ["appmanager/App/App.csproj", "App.IoC/"]
+
+RUN dotnet restore "appmanager/API/API.csproj"
+COPY . .
+WORKDIR "/src/appmanager/API"
+RUN dotnet build --no-restore "API.csproj" -c $BUILD_CONFIGURATION
+
+RUN echo "exec dotnet run --no-build --no-launch-profile -c $BUILD_CONFIGURATION --" > /entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

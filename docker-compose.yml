@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  appmanagerapi:
+    image: ${DOCKER_REGISTRY-}appmanagerapi
+    container_name: integracao
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+     - "5000:80"
+
+networks:
+ default:
+   name: network-integrations
+   external: true
