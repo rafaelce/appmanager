@@ -22,6 +22,9 @@ O projeto tem como objeto implementar as funcionalidas requisitadas no arquivo t
 - Dapper
 - Swagger API Documentation
 - xUnit
+- Mock
+- Mapper
+- Docker
 
 ## Começando
 
@@ -29,7 +32,7 @@ O projeto tem como objeto implementar as funcionalidas requisitadas no arquivo t
    > git clone https://github.com/rafaelce/appmanager.git
 2. Softwares necessários
    - Visual Studio Code - [Download](https://code.visualstudio.com/download)
-   - Postgresql - [Download](https://www.postgresql.org/download/)
+   - SQL Server - [Download](https://www.microsoft.com/en-us/sql-server/sql-server-downloads/)
 3. Extensões sugeridas do Visual Studio Code:
    - C# for Visual Studio Code - [Download](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
    - .NET Core Tools - [Download](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet)
